@@ -1,0 +1,60 @@
+body {
+    background-color: #061920;
+}
+.date-time {
+    background-color: #134C60;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    margin: 0 auto;
+    border: 3px solid #0D3340;
+    border-radius: 7px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background-color, box-shadow;
+}
+
+.date {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.time {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child) {
+    position: relative;
+    margin: 0px 6px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.time span:last-child {
+    background: #2DB2DF;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0px 5px;
+    border-radius: 3px;
+}
+
+.date-time:hover {
+    background-color: #2DB2DF;
+    box-shadow: 0 0 14px #2DB2DF;
+}
+
+.extra-space {
+    height: 100px;
+    background-color: #061920;
+}

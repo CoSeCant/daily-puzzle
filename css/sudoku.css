@@ -1,0 +1,123 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+}
+
+hr {
+    width: 500px;
+    border: 2px solid #134C60;
+}
+
+.endpoints {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    background-color: #234855;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid #020e13;
+    border-radius: 7px;
+}
+
+.time-taken {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
+.elapsed-time, .mistakes-subtitle {
+    font-weight: bold;
+    padding-right: 10px;
+    color: #33CBff;
+}
+
+.mistakes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#errors {
+    color: rgb(221, 112, 69);
+    padding-right: 10px;
+    font-weight: 500;
+}
+
+#board {
+    width: 450px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: 4px solid #020e13;
+    border-radius: 7px;
+}
+
+.tile {
+    height: 48px;
+    width: 48px;
+    border: 1px solid #2699bf83;
+    color: #061920;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#digits {
+    width: 452px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number {
+    height: 44px;
+    width: 44px;
+    border: 1px solid #061920;
+    border-radius: 12px;
+    background-color: #33CBff;
+    color: #134C60;
+    
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.number:hover {
+    box-shadow: 0 0 7px #2698BF;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+.number-selected {
+    background-color: #134C60;
+    color: #33CBff;
+    border: 2px solid #33CBff;
+}
+
+.starting-tiles {
+    background-color: #4eb8db44;
+}
+
+.horizontal-border {
+    border-bottom: 1px solid #020e13;
+}
+
+.vertical-border {
+    border-right: 1px solid #020e13;
+}
