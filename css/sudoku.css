@@ -1,7 +1,42 @@
 body {
+    background-color: #061920;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-button {
+    background-color: #234855;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    width: max-content; /*Used to enclose items if flex direction is not columnar*/
+    height: max-content;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid #020e13;
+    border-radius: 7px;
+    text-shadow: 0 0 3px #020e13;
+    transition: 1s;
+    transition-property: background-color, box-shadow;
+}
+.home-button:hover {
+    background-color: #2DB2DF;
+    box-shadow: 0 0 7px #2DB2DF;
+}
+
+.sudoku-puzzle {
+    text-align: center;
+    width: max-content; /*Used to enclose items if flex direction is not columnar*/
+    margin: 0px auto; /*Used to center just the puzzle*/
 }
 
 hr {

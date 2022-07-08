@@ -11,42 +11,48 @@
     </head>
 
     <body onload="initClock(), setGame(), initTimer()">
-        <!--Heading-->
-        <h1>Daily Sudoku</h1>
-        <hr>
-        <br>
-        <div class="endpoints">
-            <div class="time-taken">
-                <p class="elapsed-time">Time taken:</p>
-                <div id="stopwatch">00:00:00</div>
-            </div>
-            <div class="mistakes">
-                <p class="mistakes-subtitle">Mistakes made:</p>
-                <h3 id="errors">0</h3>
-            </div>
-        </div>
-        <br>
-        <!--Puzzle Board-->
-        <div id="board"></div>
-        <br>
-        <div id="digits"></div>
+        <a href="./index.html"> <!--Will eventually need to add a warning message saying that if u leave the page the timer will end and you will get a DNF for today's puzzle (if not completed already)-->
+            <button class="home-button">Return home</button>
+        </a> 
 
-        <!--Footer-->
-        <h4>New puzzle released each day at 12:00 AM EST!</h4>
-        <div class="date-time">
-            <div class="date">
-                <span id="day-name"></span>
-                <span id="month"></span>
-                <span id="day-number"></span>
-                <span id="year"></span>
+        <div class="sudoku-puzzle">
+            <!--Heading-->
+            <h1>Daily Sudoku</h1>
+            <hr>
+            <br>
+            <div class="endpoints">
+                <div class="time-taken">
+                    <p class="elapsed-time">Time taken:</p>
+                    <div id="stopwatch">00:00:00</div>
+                </div>
+                <div class="mistakes">
+                    <p class="mistakes-subtitle">Mistakes made:</p>
+                    <h3 id="errors">0</h3>
+                </div>
             </div>
-            <div class="time">
-                <span id="hour"></span>:
-                <span id="minute"></span>:
-                <span id="second"></span>
-                <span id="period"></span>
+            <br>
+            <!--Puzzle Board-->
+            <div id="board"></div>
+            <br>
+            <div id="digits"></div>
+
+            <!--Footer-->
+            <h4>New puzzle released each day at 12:00 AM EST!</h4>
+            <div class="date-time">
+                <div class="date">
+                    <span id="day-name"></span>
+                    <span id="month"></span>
+                    <span id="day-number"></span>
+                    <span id="year"></span>
+                </div>
+                <div class="time">
+                    <span id="hour"></span>:
+                    <span id="minute"></span>:
+                    <span id="second"></span>
+                    <span id="period"></span>
+                </div>
             </div>
+            <div class="extra-space"></div>
         </div>
-        <div class="extra-space"></div>
     </body>
 </html>

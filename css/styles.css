@@ -1,37 +1,144 @@
-.socials {
-    display: block;
-    height: auto;
-    width: 25px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #601313;
+    color: white;
+    margin: 0px;
+    font-size: 21px;
+    text-shadow: 0 0 1px black;
 }
 
-.puzzles {
-    display: block;
-    height: auto;
-    width: 25%;
-    border-radius: 49px;
+a {
+    text-decoration: none;
 }
 
-.background {
-    background-color: rgb(185, 197, 223);
+.web-links {
+    background-color: #9f2020;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+button {
+    background-color: #9f2020;
+    color: white;
+    border: 2px solid #9f2020;
+    border-radius: 14px;
+    font-weight: bold;
+    text-shadow: 0 0 1px black;
+    font-size: 28px;
+}
+button:hover {
+    background-color: #BF2626;
+    box-shadow: 0 0 14px #200606;
+    border: 2px solid #BF2626;
+    font-size: 30px;
+    transition: 1s;
+    transition-property: font-size;
 }
 
+.xumm {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px;
+}
+.login {
+    background-color: #0030CE;
+    border: 2px solid #E5E7EB;
+    border-radius: 7px;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    text-shadow: 0 0 1px #00165e;
+    font-size: 21px;
+    padding: 10px;
+}
+.login:hover {
+    border: 2px solid #5C77FF;
+    color: #0030CE;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 14px black;
+    text-shadow: 0 0 1px black;
+    font-size: 21px;
+    transition: 1s;
+    transition-property: background-color, box-shadow;
+}
+
+.title {
+    margin: 0 auto;
+    text-shadow: 0 0 7px black;
+    font-size: 56px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.exchange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 0px;
+    padding-bottom: 150px;
+}
 .sologenic {
     background-color: #222222;
     color: #FFFFFF;
     border-radius: 10%;
-    border: #161616:
-    border-style: ridge;
-    border-width: 3px;
+    border: 3px solid #161616;
+    text-shadow: 0 0 1px black;
+    font-size: 28px;
 }
-
 .redSolo {
     color: #D81D3C;
 }
-
-.fonts {
-    font-family: Arial, Helvetica, sans-serif;
+.sologenic:hover {
+    border: 3px solid #161616;
+    background-color: #FFFFFF;
+    color: #D81D3C;
+    box-shadow: 0 0 10px black;
+    font-size: 28px;
+    transition: 1s;
+    transition-property: background-color, box-shadow, color;
 }
 
-.title {
-
+/* These provide the styling changes for the clock */
+.date-time {
+    background-color: #9f2020;
+    border: 3px solid #801A1A;
+    text-shadow: 0 0 7px #601313;
 }
+.time span:last-child {
+    background: #DF2D2D;
+}
+.date-time:hover {
+    background-color: #DF2D2D;
+    box-shadow: 0 0 14px #FF3333;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 30px;
+    position: fixed;
+    gap: 25px;
+    bottom: 0%;
+    left: 50%;
+    right: 50%;
+}
+.twitter, .medium, .instagram {
+    height: auto;
+    width: 30px;
+}
+.twitter:hover, .medium:hover, .instagram:hover {
+    height: auto;
+    width: 40px;
+    transition: 0.5s;
+    transition-property: width;
+}
+
+
+
