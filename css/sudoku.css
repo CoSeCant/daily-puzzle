@@ -134,9 +134,10 @@ hr {
 }
 
 .number:hover {
-    box-shadow: 0 0 7px #2698BF;
-    transition: 0.5s;
-    transition-property: box-shadow;
+    box-shadow: 0 0 7px black;
+    background-color:#2698BF ;
+    color: #33CBff;
+    transition-property: color, background-color, box-shadow;
 }
 
 .number-selected {

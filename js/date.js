@@ -19,6 +19,7 @@ function updateClock() {
         dayPeriod = "AM";
     }
 
+
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novemeber", "December"];
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var ids = ["day-name", "month", "day-number", "year", "hour", "minute", "second", "period"];

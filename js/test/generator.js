@@ -74,7 +74,7 @@ rowGeneration(7)
 rowGeneration(8)*/  //This doesn't seem to work (attempt at making a single function)
 
 
-function secondRowGeneration() {
+/*function secondRowGeneration() {
     while(numbers.length < 9) {
         var randomInt = Math.floor(Math.random() * 9) + 1
         if (numbers.indexOf(randomInt) === -1 && randomInt != solution[0][numbers.length]) {
@@ -168,7 +168,7 @@ function ninthRowGeneration() {
     solution.push(numbers)
     numbers = []
 return numbers
-} 
+} */
 
 /*firstRowGeneration()
 secondRowGeneration()
