@@ -1,9 +1,38 @@
-body {
-    padding: 0px 100px;
+.container {
+    padding: 50px;
+}
+
+.title {
+    text-align: center;
 }
 
 h1 {
     padding: 25px 0px;
+}
+
+.home-button {
+    background-color: #9c1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    width: max-content; /*Used to enclose items if flex direction is not columnar*/
+    height: max-content;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid #020e13;
+    border-radius: 7px;
+    text-shadow: 0 0 3px #020e13;
+    transition: 1s;
+    transition-property: background-color, box-shadow;
+}
+.home-button:hover {
+    background-color: #DF2D2D;
+    box-shadow: 0 0 3px #FF3333;
+    border: 2px solid #020e13;
+    font-size: 21px;
+    color: white;
 }
 
 .rules {
