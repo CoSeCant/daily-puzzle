@@ -4,58 +4,59 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
         <link rel="stylesheet" href="./css/styles.css"> 
+        <link rel="stylesheet" href="./css/instructions.css">
+        <script src="./js/instructions.js"></script>
     </head>
     <body>
-        <h1>How to Play</h1>
-        <h2>General Rules</h2>
-        <ol>
-            <li>Click the "Play Sudoku" link</li>
-            <li>Once the game loads, there is no going back as the timer has started (if the browser is closed, you return to the home page, etc., the timer will still continue). <strong>Therefore, make sure you click the "Play Sudoku" button when you are ready to start</strong></stron></li>
-            <li>The timer is located above the puzzle to the left</li>
-            <li>The error counter is located above the puzzle on the right</li>
-            <li>The timer will continue until either: 
-                <ul>
-                    <li>The puzzle is completed.</li>
-                    <li>You pass the mistake threshold.</li>
-                    <li>The clock passes 11:59 PM EST.</li>
-                </ul> 
-            </li>
-            <li>The mistake threshold is 3. On the third mistake, you will recieve a DNF (did not finish) and will no longer be able to complete the daily sudoku puzzle</li>
-            <li>Upon completion, you will recieve a score based on the time taken, as well as the number of mistakes made. Higher scores are rewarded to users who complete the puzzle in a shorter amount of time and with less mistakes</li>
-            <li>If you are unable to complete the puzzle by 11:59 PM EST, you will recieve a DNF and a score of 0</li>
-            <li>New puzzles are released each day at 12:00 AM EST (clock in EST is located on the home page, as well as below the Sudoku puzzle)</li>
-        </ol>
-        <h2>Game Rules</h2>
-        <p>When you arrive at the Sudoku page it is important to take note of the different regions of the game</p>
-        <ol>
-            <li>THE TIMER</li>
-            <img src="./images/sudoku-timer.png">
-            <li>THE MISTAKE COUNTER</li>
-            <img src="./images/sudoku-mistake.png">
-            <li>THE SUDOKU BOARD</li>
-            <img src="./images/sudoku-grid.png">
-            <li>THE NUMBERS BELOW THE BOARD</li>
-            <img src="./images/sudoku-numbers.png">
-            <li>THE CLOCK (in EST)</li>
-            <img src="./images/sudoku-clock.png">
-            <li>THE RETURN HOME BUTTON</li>
-            <img src="./images/sudoku-home.png">
-        </ol>
-        <p>If you have never played sudoku before, here are the basic rules of the game:</p>
-        <ul>
-            <li><strong>Rule 1:</strong> Every row must contain the numbers 1 to 9, without duplicates</li>
-            <li><strong>Rule 2:</strong> Every column must contain the numbers 1 to 9, without duplicates</li>
-            <li><strong>Rule 3:</strong> Each of the 3 x 3 blocks found on the 9 x 9 board (making a total of nine 3 x 3 blocks) must contain the numbers 1 to 9, without duplicates</li>
-            <li><strong>Rule 4:</strong> Guessing is <strong>NOT</strong> required when solving the puzzle (sudoku is a logical number puzzle). However, you are free to guess, at the expense of recieving a mistake. Do so cautiously!</li>
-            <li><strong>Rule 5:</strong> Each puzzle only has <strong>ONE</strong> unique solution.</li>
-        </ul>
-        <p>In order to place a number on the board you must:</p>
-        <ol>
-            <li>Click on the number (1 to 9) located below the board that you would like to place onto the board</li>
-            <li>Now that you have a number selected, choose where on the board you want that number to go, and click</li>
-            <li>If the number you placed is in the right position, it will be added to the board. If it is incorrect, it will not be added to the board and you will recieve a mistake</li>
-            <li>If you would like to place a different number on the board, repeat the last two steps</li>
-        </ol>
-        <p><strong>It is very important that you follow these steps correctly in order to avoid recieving accidental mistakes</strong></p>
-        <p>For example, if you were to click where on the board, and then choose the number you want to place there, you may end up recieving a mistake, since a different number might already be selected</p>
+        <h1 class="title">How to Play</h1>
+        <div class="rules">
+            <h2>General Rules</h2>
+            <ol>
+                <li>Click the "Daily Sudoku" link</li>
+                <li>Once the game loads, there is no going back (if the browser is closed or you return to the home page, the timer will still continue). <strong>Therefore, make sure you click the "Daily Sudoku" button when you are ready to begin</strong></stron></li>
+                <li>The timer is located above the puzzle to the left</li>
+                <li>The error counter is located above the puzzle on the right</li>
+                <li>The timer will continue until either: 
+                    <ul>
+                        <li>The puzzle is completed</li>
+                        <li>You pass the mistake threshold</li>
+                        <li>The clock passes 11:59 PM EST</li>
+                    </ul> 
+                </li>
+                <li>The mistake threshold is 3. On the third mistake, you will recieve a DNF (did not finish) and will no longer be able to complete the daily sudoku puzzle</li>
+                <li>Upon completion, you will recieve a score based on the time taken, as well as the number of mistakes made. Higher scores are rewarded to users who complete the puzzle in a shorter amount of time and with less mistakes</li>
+                <li>If you are unable to complete the puzzle by 11:59 PM EST, you will recieve a DNF and a score of 0</li>
+                <li>New puzzles are released each day at 12:00 AM EST (clock (in EST) can be found on the home page, as well as below the Sudoku puzzle)</li>
+            </ol>
+        </div>
+        <div class="rules">
+            <h2>Game Rules</h2>
+            <p class="paragraphs">When you arrive at the Sudoku page it is important to take note of the different regions of the game</p>
+            <div class="locations">
+                <button id="timer-location" onclick="changeImg(id, 1)">Timer</button>
+                <button id="mistake-location" onclick="changeImg(id, 2)">Mistake Counter</button>
+                <button id="board-location" onclick="changeImg(id, 3)">The Board</button>
+                <button id="digits-location" onclick="changeImg(id, 4)">Number Choices</button>
+                <button id="clock-location" onclick="changeImg(id, 5)">The Clock</button>
+                <button id="home-location" onclick="changeImg(id, 6)">The Home Button</button>
+            </div>
+            <img id="changed-image" src="./images/sudoku-board.png">
+            <p>If you have never played sudoku before, here are the basic rules of the game:</p>
+            <ul>
+                <li><strong>Rule 1:</strong> Every row must contain the numbers 1 to 9, without duplicates</li>
+                <li><strong>Rule 2:</strong> Every column must contain the numbers 1 to 9, without duplicates</li>
+                <li><strong>Rule 3:</strong> Each of the 3 x 3 blocks found on the 9 x 9 board must contain the numbers 1 to 9, without duplicates</li>
+                <li><strong>Rule 4:</strong> Guessing is <strong>NOT</strong> required when solving the puzzle (sudoku is a logical number puzzle). However, you are free to guess, at the expense of recieving a mistake. Do so cautiously!</li>
+                <li><strong>Rule 5:</strong> Each puzzle only has <strong>ONE</strong> unique solution.</li>
+            </ul>
+            <p>In order to place a number on the board you must:</p>
+            <ol>
+                <li>Click on the number (1 to 9) located below the board that you would like to place onto the board</li>
+                <li>Now that you have a number selected, choose where on the board you want that number to go, and click</li>
+                <li>If the number you placed is in the right position, it will be added to the board. If it is incorrect, it will not be added to the board and you will recieve a mistake</li>
+                <li>If you would like to place a different number on the board, repeat the first two steps</li>
+            </ol>
+            <p><strong>It is very important that you follow these steps correctly in order to avoid recieving an accidental mistake</strong></p>
+            <p class="paragraphs">For example, if you were to click on the board, and then choose the number you want to place there, you may end up recieving a mistake, since a different number might already be selected</p>
+        </div>
     </body>
