@@ -347,6 +347,22 @@ var board = sudoku3
 
 var solution = sudoku
 
+var numSelectHistory = [9, 18, 27, 36, 45, 54, 63, 72, 81] //This array is used to store the number of times each number (1-9) is successfully placed on the board. This will allow me to incorporate the ability to indicate to the user when they have placed all of a number (Eg. 1) on the board. For instance, each time a 1 is added to the board, the array[0] will be reduced by 1. When array[0] reaches 0, this indicates that all of the 1s have successfully been placed on the board
+
+function givenNumbers(num) {              //This function is used to determine how many of each number we are already given and subtract that number*(1-9) from the array so that we can properly detect once all of one number has been added to the board. For instance, if you are given fives 1s on the board, then this function will update the numSelectHistory array to reflect that you only need to place 4 more 1s to finish them. Therefore, numSelectHistory[0] = 4
+  for (var i = 0; i < 9; i++) {
+    if (board[i].includes(num)) {
+      numSelectHistory[num - 1] -= num
+    }
+  }
+}
+
+for (var i = 0; i < 9; i++) {  //This for loop is used to efficiently run the givenNumbers function for each number (1 though 9)
+  givenNumbers(i + 1)
+}
+
+console.log(numSelectHistory)
+
 //Timer function
 function timerCycle() {
     if (errors <= 2 && missingSum != userSum) {
@@ -452,6 +468,14 @@ function selectTile() { //This function allows you to add the selected digit to 
 
         if (solution[y][x] == numSelected.id) { //This checks to see if what digit you are adding to the board is correct
             this.innerText = numSelected.id;
+            numSelectHistory[numSelected.id - 1] -= numSelected.id //This calculation updates the array so that we know when a number (1-9) was successfully added to the board
+            // This for loop is used to check whether or not all of a particular number has been added to the board
+            for (var i = 0; i < numSelected.id; i++) {             
+              if (numSelectHistory[numSelected.id - 1] == 0) { //If all of a number has been added to the board, then that number is removed from the possible digits below the board (this makes the game more user friendly)
+                var element = document.getElementById(numSelected.id)
+                element.parentNode.removeChild(element)
+              }
+            }
             userSum = userSum + parseInt(numSelected.id) //This is used to sum all the numbers that the user successfully inputs into the board
             console.log(userSum)
         } else {
