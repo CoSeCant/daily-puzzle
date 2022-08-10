@@ -469,12 +469,10 @@ function selectTile() { //This function allows you to add the selected digit to 
         if (solution[y][x] == numSelected.id) { //This checks to see if what digit you are adding to the board is correct
             this.innerText = numSelected.id;
             numSelectHistory[numSelected.id - 1] -= numSelected.id //This calculation updates the array so that we know when a number (1-9) was successfully added to the board
-            // This for loop is used to check whether or not all of a particular number has been added to the board
-            for (var i = 0; i < numSelected.id; i++) {             
-              if (numSelectHistory[numSelected.id - 1] == 0) { //If all of a number has been added to the board, then that number is removed from the possible digits below the board (this makes the game more user friendly)
-                var element = document.getElementById(numSelected.id)
-                element.parentNode.removeChild(element)
-              }
+            // This if statement is used to check whether or not all of a particular number has been added to the board            
+            if (numSelectHistory[numSelected.id - 1] == 0) { //If all of a number has been added to the board, then that number is removed from the possible digits below the board (this makes the game more user friendly)
+              var element = document.getElementById(numSelected.id)
+              element.parentNode.removeChild(element)
             }
             userSum = userSum + parseInt(numSelected.id) //This is used to sum all the numbers that the user successfully inputs into the board
             console.log(userSum)
