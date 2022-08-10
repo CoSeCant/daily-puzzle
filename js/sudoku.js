@@ -363,6 +363,16 @@ for (var i = 0; i < 9; i++) {  //This for loop is used to efficiently run the gi
 
 console.log(numSelectHistory)
 
+//Home Button Alert Function
+function alertMessage() { //This function is used to alert the users when they click a button that leads them to a point of no return so that they can re-evaluate if they truely want to proceed
+  var option = confirm("If u leave the page the timer will end and you will get a DNF (did not finish) for today's puzzle. Are you sure you would like to continue?")
+  if (option == true) {
+    document.getElementById("home-link").href = "./index.html"
+  } else {
+    return
+  }
+}
+
 //Timer function
 function timerCycle() {
     if (errors <= 2 && missingSum != userSum) {
@@ -396,9 +406,15 @@ function timerCycle() {
         console.log(timeStorage)//When the user reaches 3 errors, the time stops and is stored in the timeStorage variable
         console.log(missingSum, userSum)
     } else if (missingSum === userSum) { //This checks if the user has completed the puzzle successfully
-        alert(`You have successfully finished today's puzzle with ${errors} mistake(s) and a completion time of ${timeStorage[0]}`)
+        document.getElementById("board").remove();
+        document.getElementById("digits").remove();
+        document.getElementById("outcome").innerText = `Congratulations! You have successfully completed today's puzzle with ${errors} mistake(s) and a completion time of ${timeStorage[0]} Come back tomorrow!`
+        //alert(`You have successfully finished today's puzzle with ${errors} mistake(s) and a completion time of ${timeStorage[0]}`)
     } else { //This gives the user a message if the failed the puzzle by commiting to many mistakes
-        alert(`You have made ${errors} mistakes and are no longer able to continue today's puzzle. Time spent was ${timeStorage[0]}`);
+        //alert(`You have made ${errors} mistakes and are no longer able to continue today's puzzle. Time spent was ${timeStorage[0]}`);
+        document.getElementById("board").remove();
+        document.getElementById("digits").remove();
+        document.getElementById("outcome").innerText = `You have made ${errors} mistakes and are no longer able to continue today's puzzle. Time spent was ${timeStorage[0]} Come back tomorrow to try again!`
     }
 }
 

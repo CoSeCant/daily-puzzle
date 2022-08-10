@@ -11,8 +11,8 @@
     </head>
 
     <body onload="initClock(), setGame(), initTimer()">
-        <a href="./index.html"> <!--Will eventually need to add a warning message saying that if u leave the page the timer will end and you will get a DNF for today's puzzle (if not completed already)-->
-            <button class="home-button">Return home</button>
+        <a id="home-link"> 
+            <button onclick="alertMessage()" class="home-button">Return home</button>
         </a> 
 
         <div class="sudoku-puzzle">
@@ -31,6 +31,8 @@
                 </div>
             </div>
             <br>
+            <!--Outcome Message-->
+            <p id = "outcome"></p>
             <!--Puzzle Board-->
             <div id="board"></div>
             <br>
