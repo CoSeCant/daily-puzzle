@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+        <title>NFTs</title>
+        <link rel="stylesheet" href="./css/styles.css"> 
+        <link rel="stylesheet" href="./css/gallery.css">
+        <script src="./js/gallery.js"></script>
+    </head>
+    <body>
+        <a href="./index.html">
+            <button class="home-button">Return Home</button>
+        </a>
+        <h1>NFT Gallery</h1>
+        <div class="full-NFTs" id="fullNFTBox">
+            <img src="" id="fullNFT">
+            <div class="metadata">
+                <h2 id="owner"></h2>
+                <h2 id="price">Last price paid: </h2>
+                <p id="NFT-info">Description</p>
+            </div>
+            <span onclick="closeFullNFT()">X</span>
+            <span class="previous" onclick="goPrevious()"><</span>
+            <span class="next" onclick="goNext()">></span>
+        </div>
+        <div class="NFTs"></div>
+
+        <script>
+            for (let x = 0; x < NFTs.length; x++) {
+                const element = '<img src="' + NFTs[x] + '" onclick="openFullNFT(this.src)">'
+                document.querySelector('.NFTs').innerHTML += element;
+            }
+
+            var fullNFTBox = document.getElementById("fullNFTBox");
+            var fullNFT = document.getElementById("fullNFT");
+
+            function openFullNFT(NFT) {
+                fullNFTBox.style.display = "flex"
+                fullNFT.src = NFT
+                document.getElementById("owner").innerHTML = `Owner: ${issuerAddress}`;
+            }
+
+            function closeFullNFT() {
+                fullNFTBox.style.display = "none"
+            }
+
+            function goPrevious() {
+                var position = NFTs.indexOf(fullNFT.src)
+                if (position == 0) {
+                    return
+                } else if (position > 0) {
+                    fullNFT.src = NFTs[position - 1]
+                }
+            }
+
+            function goNext() {
+                var position = NFTs.indexOf(fullNFT.src)
+                if (position == NFTs.length - 1) {
+                    return
+                } else if (position < NFTs.length) {
+                    fullNFT.src = NFTs[position + 1]
+                }
+            }
+        </script>
+    </body>
+</html>

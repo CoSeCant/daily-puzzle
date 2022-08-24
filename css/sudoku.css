@@ -27,6 +27,7 @@ a {
     text-shadow: 0 0 3px #020e13;
     transition: 1s;
     transition-property: background-color, box-shadow;
+    cursor: pointer;
 }
 .home-button:hover {
     background-color: #2DB2DF;
@@ -114,6 +115,17 @@ hr {
     align-items: center;
 }
 
+/*When you hover over a non-prefilled tile, it changes colour*/
+.tile:hover {
+    background: rgba(215, 227, 231, 0.719);
+    /*border: solid black 1px;*/
+    cursor: pointer;
+}
+.starting-tiles:hover {
+    background: #4eb8db44;
+    /*border: solid #2699bf83 1px;*/
+    cursor: default;
+}
 
 #digits {
     width: 452px;
@@ -139,6 +151,7 @@ hr {
     justify-content: center;
     align-items: center;
     margin: 2px;
+    cursor: grab;
 }
 
 .number:hover {

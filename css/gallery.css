@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.home-button {
+    background-color: #9c1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: max-content; /*Used to enclose items if flex direction is not columnar*/
+    height: max-content;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid #020e13;
+    border-radius: 7px;
+    text-shadow: 0 0 3px #020e13;
+    transition: 1s;
+    transition-property: background-color, box-shadow;
+    cursor: pointer;
+}
+.home-button:hover {
+    background-color: #DF2D2D;
+    box-shadow: 0 0 3px #FF3333;
+    border: 2px solid #020e13;
+    font-size: 21px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px;
+    margin-top: 50px;
+    font-size: 100px;
+}
+
+.NFTs {
+    width: 80%;
+    margin: 0px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+}
+
+.NFTs img {
+    width: 100%;
+    cursor: pointer;
+    border: solid black 4px;
+    border-radius: 14px;
+}
+
+.NFTs img:hover {
+    transform: scale(0.95);
+    box-shadow: 0 32px 75px rgba(68,77,136,0.2);
+    transition: 1s;
+}
+
+.full-NFTs {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    gap: 50px;
+}
+
+.full-NFTs img {
+    width: 90%;
+    max-width: 500px;
+}
+
+.full-NFTs .metadata {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.full-NFTs span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.full-NFTs span:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 10px rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.77);
+}
+
+.full-NFTs .previous, .full-NFTs .next {
+    position: absolute;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.14);
+    cursor: pointer;
+}
+
+.full-NFTs .previous {
+    top: 50%;
+    left: 5%;
+    right: auto;
+}
+
+.full-NFTs .next {
+    top: 50%;
+    right: 5%;
+}

@@ -476,7 +476,7 @@ function selectTile() { //This function allows you to add the selected digit to 
         if (this.innerText != "") { //This if statement checks to see if the tile you are trying to add a digit to is already filled
             return; //If there already is a digit in the tile, we exit the function here
         }
-
+        
         //This is used to split the board co-ordinates which are forged on line 49 (now on line number 104 I think)
         let coords = this.id.split("-"); //This creates an array containing the y and x coordinates on the board --> ["y", "x"]
         let y = parseInt(coords[0]);
