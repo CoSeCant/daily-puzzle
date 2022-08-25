@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+        <title>Monthly Leaderboard</title>
+        <link rel="stylesheet" href="./css/styles.css"> 
+        <link rel="stylesheet" href="./css/leaderboard.css">
+        <script src="./js/leaderboard.js"></script>
+    </head>
+    <body>
+        <div class="fixedHeading">
+            <h1>Leaderboard</h1>
+        </div>
+        <div class="scroll">
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+        <div class="leaderboard">
+            <div class="subheadings">
+                <p>User XRP Address</p>
+                <p>Score</p>
+            </div>
+            <div class="data">
+                <div class="users"></div>
+                <div class="scores"></div>
+            </div>
+        </div>
+
+
+        <script>
+            for (let x = 1; x < competitors.length; x++) {
+                const userElement = '<p>' + x + '. ' + competitors[x] + ':' + '</p>'
+                const scoreElement = '<p>' + accruedPoints[x] + '</p>'
+                document.querySelector('.users').innerHTML += userElement;
+                document.querySelector('.scores').innerHTML += scoreElement;
+            }
+        </script>
+    </body>
