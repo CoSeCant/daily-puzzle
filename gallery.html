@@ -37,7 +37,9 @@
 
             function openFullNFT(NFT) {
                 fullNFTBox.style.display = "flex"
-                fullNFT.src = NFT
+                var sourceNFT = '.' + NFT.slice(39)
+                console.log(sourceNFT)
+                fullNFT.src = sourceNFT
                 document.getElementById("owner").innerHTML = `Owner: ${issuerAddress}`;
             }
 
@@ -46,7 +48,8 @@
             }
 
             function goPrevious() {
-                var position = NFTs.indexOf(fullNFT.src)
+                var position = NFTs.indexOf('.' + fullNFT.src.slice(39))
+                console.log(position)
                 if (position == 0) {
                     return
                 } else if (position > 0) {
@@ -55,7 +58,7 @@
             }
 
             function goNext() {
-                var position = NFTs.indexOf(fullNFT.src)
+                var position = NFTs.indexOf('.' + fullNFT.src.slice(39))
                 if (position == NFTs.length - 1) {
                     return
                 } else if (position < NFTs.length) {

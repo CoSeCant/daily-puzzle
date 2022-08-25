@@ -7,7 +7,7 @@ const numNFTs = 28
 const NFTs = [];
 
 for (i = 1; i <= numNFTs; i++) {
-    NFTs.push(NFTPathway + i + '.jpg')
+    NFTs.push('./NFT/' + i + '.jpg')
 }
 console.log(NFTs)
 
