@@ -50,7 +50,7 @@
                 if (position == 0) {
                     return
                 } else if (position > 0) {
-                    fullNFT.src = NFTs[position - 1]
+                    fullNFT.src = sourcedNFTs[position - 1]
                 }
             }
 
@@ -59,7 +59,7 @@
                 if (position == NFTs.length - 1) {
                     return
                 } else if (position < NFTs.length) {
-                    fullNFT.src = NFTs[position + 1]
+                    fullNFT.src = sourcedNFTs[position + 1]
                 }
             }
         </script>
