@@ -28,7 +28,7 @@
 
         <script>
             for (let x = 0; x < NFTs.length; x++) {
-                const element = '<img src="' + NFTs[x] + '" onclick="openFullNFT(this.src)">'
+                const element = '<img src="' + sourcedNFTs[x] + '" onclick="openFullNFT(this.src)">' //Changed the NFT src from the way it was formatted in the NFTs array to the updated sourcedNFTs array which should allow the images to load on github pages now! If this needs to be reverted, all that needs to be done is changing the array in this line back to 'NFTs'
                 document.querySelector('.NFTs').innerHTML += element;
             }
 

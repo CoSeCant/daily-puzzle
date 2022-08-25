@@ -494,6 +494,7 @@ function selectTile() { //This function allows you to add the selected digit to 
             console.log(userSum)
         } else {
             errors += 1;
+            min += 1; //Gives the user a time penalty of 1 min for each error made (maximum 2 min --> Third error does not give time penalty, since the game automatically ends after the third error)
             document.getElementById("errors").innerText = errors; //Errors increases by 1 if incorrect placement
         }
     } 
